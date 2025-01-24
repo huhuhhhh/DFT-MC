@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 DFTMC V 1.0.0
-Enhanced Monte Carlo Simulation for High Entropy materials: High Entropy MXenes etc. This code was used in our paper First-Principles and Monte Carlo Simulations of High-Entropy MXenes XXXX by Noah Oyeniran, Oyshee Chowdury, and Chongze Hu
+Enhanced Monte Carlo Simulation for High Entropy materials: High Entropy MXenes etc. 
+This code was used in our paper First-Principles and Monte Carlo Simulations of High-Entropy MXenes XXXX by Noah Oyeniran, Oyshee Chowdury, and Chongze Hu
 
 This script performs Monte Carlo simulations to optimize high-entropy MXene structures. It includes
 functions for supercell generation, element substitution, structure reordering, POTCAR creation,
