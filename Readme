@@ -1,0 +1,79 @@
+# -*- coding: utf-8 -*-
+DFTMC V 1.0.0
+Enhanced Monte Carlo Simulation for High Entropy materials: High Entropy MXenes etc. This code was used in our paper First-Principles and Monte Carlo Simulations of High-Entropy MXenes XXXX by Noah Oyeniran, Oyshee Chowdury, and Chongze Hu
+
+This script performs Monte Carlo simulations to optimize high-entropy MXene structures. It includes
+functions for supercell generation, element substitution, structure reordering, POTCAR creation,
+and VASP integration. The output includes energy trends and optimized structures.
+
+This project performs Monte Carlo (MC) simulations on high-entropy MXenes using Python and VASP. The code enables element substitution in MXene structures while maintaining the correct coordination environment, ensuring structural diversity, and assessing the stability of generated configurations.
+
+INPUT file: Original "POSCAR" file
+and the DFTMC.py code.
+
+Dependencies:
+Python Packages
+Install the following Python libraries before running the code:
+
+pymatgen: For crystal structure manipulation and file I/O.
+pip install pymatgen
+
+numpy: For numerical operations.
+pip install numpy
+matplotlib: For plotting energy trends (optional).
+pip install matplotlib
+
+
+External Software
+VASP: Vienna Ab initio Simulation Package for density functional theory (DFT) calculations. Ensure:
+VASP is installed and properly configured.
+You have a valid license for VASP.
+SLURM (or another job scheduler): To run VASP on an HPC cluster. The script includes SLURM-specific commands (srun).
+
+Required Files and Directories
+Input Files
+POSCAR: Initial structure file in VASP format. The script expects the POSCAR file to be located in the working directory or provided via the poscar_file argument.
+POTCAR Files:
+The pseudopotentials for the elements must be located in the specified POTCAR_PATH.
+Ensure that the pseudopotentials are consistent with your functional (e.g., PBE).
+Output Files
+The script generates multiple iterations of structure files, including:
+CONTCAR: VASP output structure for each iteration.
+OUTCAR: VASP output files containing energy and other information.
+energy_trend.txt: A file tracking the energy of each iteration.
+System Requirements
+Hardware
+High-Performance Computing (HPC) environment is recommended.
+Default SLURM settings in the script:
+16 CPU cores.
+32 threads.
+16 GPUs.
+Adjust the resource allocation in the srun command based on your HPC configuration.
+Disk Space
+Ensure sufficient space for intermediate files (e.g., POSCAR, CONTCAR, OUTCAR) generated during the Monte Carlo iterations.
+Permissions
+Ensure you have read/write permissions for all directories where files will be created.
+Running the Code
+Place the required POSCAR file in the working directory or specify its path when running the script.
+Ensure the POTCAR files for all elements are available in the specified POTCAR_PATH.
+Run the script:
+
+python DFTMC.py
+
+Monitor the output files:
+energy_trend.txt for energy trends.
+Iterative CONTCAR files for structural changes.
+Customization
+SLURM Resource Settings
+Modify the SLURM command in the script to match your HPC environment:
+
+srun -n 16 -c 32 --cpu_bind=cores -G16 vasp_std
+
+Update the number of CPUs, threads, and GPUs as necessary.
+Element Substitution
+Adjust the composition fractions and substitution rules in the code to target specific high-entropy MXene compositions.
+Notes
+The script maintains the original coordination environment during element substitution to ensure realistic structures.
+If the sequence of elements in POSCAR changes, the corresponding POTCAR must remain valid.
+License
+This code is intended for academic and research purposes. Ensure you have the appropriate licenses for any external software (e.g., VASP).
