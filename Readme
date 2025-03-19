@@ -37,7 +37,7 @@ Input Files
 POSCAR: Initial structure file in VASP format. The script expects the POSCAR file to be located in the working directory or provided via the poscar_file argument.
 POTCAR Files:
 The pseudopotentials for the elements must be located in the specified POTCAR_PATH.
-Ensure that the pseudopotentials are consistent with your functional (e.g., PBE).
+Ensure that the pseudopotentials are consistent with your functional (e.g., PBE). The DFTMC.py script will automatically help in creating the POTCAR file.
 Output Files
 The script generates multiple iterations of structure files, including:
 CONTCAR: VASP output structure for each iteration.
