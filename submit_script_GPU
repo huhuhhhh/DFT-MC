@@ -5,7 +5,7 @@
 #SBATCH -t 48:00:00
 #SBATCH -C gpu
 #SBATCH -G 16
-#SBATCH -A m526_g 
+#SBATCH -A mxxx_g 
 
 
 # Load necessary modules
