@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Monte Carlo Simulation for MXene Structure Optimization
+Monte Carlo Simulation for High Entropy MXene Structure Optimization
 
-This script performs Monte Carlo simulations with element substitutions for MXene structures.
-It integrates with VASP for energy calculations and ensures unique configurations are explored. This script can be adopted for any high entropy material systems.
+This script performs Monte Carlo simulations with element substitutions for High Entropy Materials.
+It integrates with VASP for energy calculations and ensures unique configurations are explored to find the minimum energy configuration (most stable configuration). This script can be adopted for any high entropy material systems.
 
 Author: Noah Oyeniran
 License: MIT
