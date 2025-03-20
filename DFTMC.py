@@ -6,6 +6,7 @@ This script performs Monte Carlo simulations with element substitutions for High
 It integrates with VASP for energy calculations and ensures unique configurations are explored to find the minimum energy configuration (most stable configuration). This script can be adopted for any high entropy material systems.
 
 Author: Noah Oyeniran
+Version: 1:0:0
 License: MIT
 """
 from pymatgen.core import Structure, Element
