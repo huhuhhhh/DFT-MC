@@ -1,7 +1,10 @@
-DFTMC V 1.0.0
+DFTMC V 1.0.0 and V2
 Enhanced Monte Carlo Simulation for High Entropy Materials: High Entropy MXenes etc. 
 This code was used in our paper First-Principles and Monte Carlo Simulations of High-Entropy MXenes by Noah Oyeniran, Oyshee Chowdury, and Chongze Hu
 Please cite this paper: Appl. Phys. Lett. 126, 123105 (2025); doi: 10.1063/5.0258487
+
+Version 2 allows periodic relaxation and site-specific swapping. Please cite this additional article "Noah Oyeniran, Chongze Hu. Ab Initio Monte Carlo Prediction of Chemical Order and Disorder in Multicomponent MXenes. Materials Horizons. DOI: https://doi.org/10.1039/D6MH00312E" 
+where this was implemented and introduced to study chemical order and disorder in multicomponent MXenes.
 
 This script performs Monte Carlo simulations to optimize high-entropy MXene structures. It includes
 functions for supercell generation, element substitution, structure reordering, POTCAR creation,
